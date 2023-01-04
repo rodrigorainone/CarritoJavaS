@@ -789,7 +789,9 @@ function mostrarProductos () {
     getTodosDivProductos.forEach (element =>{
         element.onclick = (e)=>{
             console.log(e.target.className);
+            
             if (e.target.className!=="botonComprar"){
+                window.scrollTo(0,0);
                 let cualEs = element.id;
                 let buscado = buscarProducto(cualEs.slice(-1),productos);
                 console.log(buscado);

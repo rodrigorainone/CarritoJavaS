@@ -876,18 +876,21 @@ function verCarrito(){
         getVerCarrito.innerHTML="";    
         if (arregloCarrito.length!==0){
             if (arregloCarrito.length < 3){
-                getVerCarrito.style.height="400px"
+                getVerCarrito.style.height="300px"
             }
             arregloCarrito.forEach(element =>{                
                 getVerCarrito.innerHTML+=`<div class="mostrarProductosCarrito">
-                                    <img src="${element.img}" alt="">                                                                
-                                    <p>Tipo : ${element.tipo} </p>
-                                    <p>Colores : ${element.colores}</p>  
+                                    <div class="mostrarProductosCarritodiv1">
+                                        <img src="${element.img}" alt="">                        
+                                        <p>${element.descripion}</p>                         
+                                    </div>
+                                    <div class="mostrarProductosCarritodiv2">
                                     <button id="${element.id}Menos" class="botonSumRes">-</button>
                                     <P>Cantidad: ${element.cantidad} </p>
                                     <button id="${element.id}Mas" class="botonSumRes">+</button>
-                                    <p>precio : $${element.precio*element.cantidad} <p/> 
-                                    <button  id="${element.id}" class="botonEliminar">Eliminar </button>                                                       
+                                        <p>precio : $${element.precio*element.cantidad} <p/> 
+                                        <button  id="${element.id}" class="botonEliminar">Eliminar </button>    
+                                    </div>                                                   
                                 </div>`;                                                           
                 total+=element.cantidad*element.precio;                                 
             });             

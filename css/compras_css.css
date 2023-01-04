@@ -386,6 +386,16 @@ footer {
   .mostrarProductoSoloDiv1Datos button{
     width: 200px;
   }
+  .mostrarProductosCarritodiv1{
+    display: flex;
+    gap:10px;
+    align-items: center;
+    }
+  .mostrarProductosCarritodiv2{
+      display: flex;
+      gap:10px;
+      align-items: center;
+  }
   
   @media (min-width: 1px) and (max-width: 599px) {
     /*         empieza header                    */
@@ -590,5 +600,49 @@ footer {
     font-size: 14px;
   }
 
+  .mostrarProductosCarrito img {
+    height: 50px;
+    width: 50px;
+  }
+  .mostrarProductosCarrito{    
+    flex-direction: column;
+    border-bottom: black solid 1px;
+    align-items: flex-start;
+  }
+  .mostrarProductosCarritodiv1{
+    display: flex;
+    align-items:center;    
+    gap:5px;
+    font-size: 14px;
+    }
+    .mostrarProductosCarritodiv2{
+      margin-bottom: 10px;
+      font-size: 14px;
+      padding-left: 5px;
+    }
+  .tipo{
+    display: none;
+  }
+  .botonSumRes{
+    width: 30px;
+    height: 25px;
+  }
+  .verTotal{
+    margin-top: 20px;
+  }
+
+  .carritoVacio{
+    padding-top: 50px;
+    height: 100px; 
+    padding-left: 50px;   
+  }
+
+  .pCarritouno {
+    font-size: 35px;
+  }
+
+  .pCarritoDos {
+    font-size: 20px;
+  }
 
 }

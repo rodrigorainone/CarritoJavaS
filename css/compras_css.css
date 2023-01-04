@@ -1,0 +1,587 @@
+/*reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+  /*estructura desktop */
+.gridConteiner {
+    
+    display: grid;   
+    grid-template: "header" 
+                    "main" auto
+                    "footer";    
+    
+    
+  }
+  main {
+    grid-area: main;    
+    
+  }
+  
+  footer {
+    
+    grid-area: footer;    
+    background-color: rgb(32, 30, 30);
+    text-align: center;
+    color: white;  
+    
+    
+    
+    
+    
+  }
+  
+  /*empieza el header desktop */
+  #conteinerHeader {
+    grid-area: header;
+    display: grid;
+    grid-template: "promo" "contenerInfoHeader";
+  }
+  
+  .promo {
+    grid-area: promo;    
+    background-color: #084d6e;
+    height: 40px;
+    text-align: center;
+    padding: 7px;
+    font-size: 16px;
+    color: white;
+    
+  }
+  
+  .contenerInfoHeader {
+    grid-area: contenerInfoHeader;
+    background-color:white;
+    height: 200px;
+    display: grid;
+    grid-template: "iconosHeader logoHeader carrito" 150px "nav nav nav" 50px;
+  }
+  
+  .iconosHeader {
+    grid-area: iconosHeader;
+    padding-left: 15px;
+    padding-top: 15px;
+    
+  }
+  
+  .iconosHeader a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    
+  }
+
+  
+
+  
+  .logoHeader {
+    grid-area: logoHeader;   
+    text-align: center;
+  }
+
+  .imagenLogo{
+    width: 450px;
+    height: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .carrito{
+    display: flex;
+    justify-content:flex-end ;
+    padding-right: 10px;
+    padding-top: 10px;  
+    font-size: 20px;
+    cursor: pointer;  
+  }
+
+
+
+  
+  /* menu destktop*/
+nav {
+    grid-area: nav;
+    background-color: rgb(54, 54, 54);    
+    font-size: 15px;
+    z-index: 5;
+  }
+  
+  .ulPrin {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    list-style: none;
+  }
+  
+  .ulPrin li {
+    padding: 15px;
+  }  
+  .ulPrin li a {
+    color: white;
+    text-decoration: none;
+  }
+  .ulPrin li a:hover {
+    color: #203d92;
+  }
+  
+  .logoHeaderMobile, #menuNavPhone, .menuNavPhoneLabel {
+    display: none;
+  }
+
+
+
+/*        footer            */
+
+footer {
+    background-color: rgb(54, 54, 54);
+}
+
+#mostrarMenuAyudarte, #mostrarMenuNosotros, #mostrarMenuInformar, #mostrarMenuSeguinos, #mostrarMenuMedios, .mostrarMenuAyudarteMod, .mostrarMenuNosotrosMod, .mostrarMenuInformarMod, .mostrarMenuSeguinosMod, .mostrarMenuMediosMod {
+    display: none;
+  }
+  
+  .colorPhone {
+    color: #084d6e;
+  }
+  
+  .footerContenedorPhoneInfo {
+    display: grid;
+    grid-template: "ayudarFot nosotrosFot informarFot seguinosFot  mediosFot" auto "copyright copyright copyright copyright copyright " auto;
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  
+  .ayudarFot {
+    grid-area: ayudarFot;
+    text-align: left;
+    padding-top: 20px;
+  }
+  
+  .nosotrosFot {
+    grid-area: nosotrosFot;
+    text-align: left;
+    padding-top: 20px;
+  }
+  
+  .informarFot {
+    grid-area: informarFot;
+    text-align: left;
+    padding-top: 20px;
+  }
+  
+  .seguinosFot {
+    grid-area: seguinosFot;
+    text-align: left;
+    padding-top: 20px;
+  }
+  
+  .mediosFot {
+    grid-area: mediosFot;
+    text-align: left;
+    padding-top: 20px;
+  }
+  
+  .copyright {
+    grid-area: copyright;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 14px;
+  }
+  
+  .MediosUl ul, .SeguinosUl ul, .InformarUl ul, .NosotrosUl ul, .ayudarteUl ul {
+    list-style: none;
+  }
+  .MediosUl ul li, .SeguinosUl ul li, .InformarUl ul li, .NosotrosUl ul li, .ayudarteUl ul li {
+    padding-top: 15px;
+    font-weight: lighter;
+  }
+  .MediosUl ul li p a, .SeguinosUl ul li p a, .InformarUl ul li p a, .NosotrosUl ul li p a, .ayudarteUl ul li p a {
+    color: white;
+    text-decoration: none;
+  }
+  .MediosUl ul li p a:hover, .SeguinosUl ul li p a:hover, .InformarUl ul li p a:hover, .NosotrosUl ul li p a:hover, .ayudarteUl ul li p a:hover {
+    color: white;
+  }
+  #labelMenuAyudarteDos,#labelMenuNosotrosDos,#LabelMenuInformarDos,#labelMenuSeguinosDos,#labelMenuMediosDos{
+     display:none;
+  }
+  
+
+  /*  mostrar productos   */
+ 
+
+  
+  .mostrarProductos{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;    
+    width: 450px;   
+    height: 400px;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .mostrarProductos:hover{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+  }
+
+
+  .mostrarProductos img{
+    width: 200px;
+    height: 200px;
+
+  }
+  
+  .eventVista{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+  
+   
+  }
+
+  /*  mostrar productos carrito  */
+
+  .mostrarProductosCarrito{
+    display: flex;  
+    gap:10px;  
+    align-items:center;
+  }
+
+  .mostrarProductosCarrito img{
+    width: 150px;
+    height: 150px;
+  }
+
+  .getVerCarritoVista{   
+    
+    gap:20px;   
+    display: none;
+    flex-direction: column;
+    align-items: center;
+     
+    
+  }
+
+  .botonSumRes{
+    height: 30px;
+    width: 30px;
+    background-color: #084d6e;
+    border: none;
+  }
+  .botonSumRes:hover{
+    color:white;
+  }
+
+  .botonEliminar{
+    background-color: #084d6e;
+    border:none;
+    width: 100px;
+    height: 30px;
+  }
+  .botonEliminar:hover{
+    color:white;
+  }
+  .botonComprar {
+    background-color: #084d6e;
+    width: 150px;
+    border-radius: 8px;
+    border: none;
+    height: 30px;
+  }
+  .botonComprar:hover {
+    color:white;
+  }
+
+  .verTotal{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap:30px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+  }
+
+  .verTotal button{
+    background-color: rgb(110, 17, 17);
+    border: none;
+    height: 30px;
+    width: 160px;
+  }
+
+  .verTotal a:hover{
+    color:white;
+  }
+
+
+  .carritoVacio {    
+    padding-top: 200px;
+  }
+
+  .carritoVacio button{
+    height: 50px;
+    width: 160px;
+    background-color: #084d6e;
+    border: none;
+    margin-top: 50px;
+
+  }
+
+  .carritoVacio a{
+    color:black;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .carritoVacio a:hover{
+    color:white;    
+  }
+  .pCarritouno{
+    color:#efb810;
+    font-size: 40px;
+  }
+
+  .pCarritoDos{
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .mostrarProductosSolo{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mostrarProductoSoloDiv1{
+    display: flex;
+  }
+
+  .mostrarProductoSoloDiv1Datos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    gap:100px;
+  }
+
+  .mostrarProductoSoloDiv1Datos button{
+    width: 200px;
+  }
+  
+  @media (min-width: 1px) and (max-width: 599px) {
+    /*         empieza header                    */
+  #conteinerHeader {
+    grid-area: header;
+    display: grid;
+    grid-template: "promo" 30px "contenerInfoHeader" 70px;
+  }
+  .promo {    
+    grid-area: promo;
+    background-color: #084d6e;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 5;
+    font-size: 13px;
+  }
+  .contenerInfoHeader {
+    grid-area: contenerInfoHeader;
+    background-image: url(../img/fondo4.jpg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    left: 0px;
+    top: 30px;
+    z-index: 5;
+  }
+    /* menu mobile */
+    .logoHeader {
+        display: none;
+    }
+  nav {
+    background-color: transparent;
+  }
+  .logoHeaderMobile, #menuNavPhone, .menuNavPhoneLabel {
+    display: block;
+  }
+  .ulPrin {
+    background-color: #084d6e;
+    list-style: none;
+    width: 100%;
+    position: fixed;
+    left: -800px;
+    top: 0;
+    transition: all 1s;
+    padding-top: 120px;
+    padding-left: 10px;
+    display: block;
+  }
+  .ulPrin li {
+    padding-bottom: 15px;
+    border-top: 1px solid silver;
+    padding-top: 10px;
+    z-index: 150;
+  }
+  .ulPrin li:hover {
+    transform: none;
+    transition: none;
+    box-shadow: none;
+    border-radius: none;
+  }
+  .ulPrin li:hover a {
+    color: white;
+  }
+  .ulPrin li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+  #menuNavPhone {
+    display: none;
+  }
+  #menuNavPhone:checked ~ .ulPrin {
+    left: 0px;
+  }
+  .menuNavPhoneLabel {
+    position: relative;
+    z-index: 150;
+  }
+  .fa-bars, .fa-envelope, .fa-instagram, .fa-whatsapp, .fa-facebook-f, .logoHeaderMobile {
+    font-size: 15px;
+  }
+  .logoHeaderMobile a {
+    color: black;
+    text-decoration: none;    
+    font-size: 17px;
+  }
+  .fa-bars:hover {
+    color: white;
+  }
+    /*     footer phone */
+  .footerContenedorPhoneInfo {
+    text-align: center;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .footerContenedorPhoneInfo p {
+    padding-bottom: 5px;
+  }
+  
+  #mostrarMenuAyudarte, #mostrarMenuNosotros, #mostrarMenuInformar, #mostrarMenuSeguinos, #mostrarMenuMedios {
+    display: none;
+  }
+  .footerContenedorPhoneInfo label:hover {
+    cursor: pointer;
+  }
+  .ayudarteUl ul, .NosotrosUl ul, .InformarUl ul, .SeguinosUl ul, .MediosUl ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    gap: 5px;
+  }
+  .ayudarteUl ul li, .NosotrosUl ul li, .InformarUl ul li, .SeguinosUl ul li, .MediosUl ul li {
+    color: white;
+    text-align: left;
+  }
+  .ayudarteUl ul li p, .NosotrosUl ul li p, .InformarUl ul li p, .SeguinosUl ul li p, .MediosUl ul li p {
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+  }
+  .ayudarteUl a, .NosotrosUl a, .InformarUl a, .SeguinosUl a, .MediosUl a {
+    color: white;
+    text-decoration: none;
+  }
+  .ayudarteUl a:hover, .NosotrosUl a:hover, .InformarUl a:hover, .SeguinosUl a:hover, .MediosUl a:hover {
+    color: #C2E4EC;
+    text-decoration: none;
+  }
+  .ayudarFot, .nosotrosFot, .informarFot, .seguinosFot, .mediosFot {
+    text-align: left;
+  }
+  .ayudarteUl, .NosotrosUl, .InformarUl, .SeguinosUl, .MediosUl {
+    display: none;
+  }
+  #mostrarMenuAyudarte:checked ~ .ayudarteUl, #mostrarMenuNosotros:checked ~ .NosotrosUl, #mostrarMenuInformar:checked ~ .InformarUl, #mostrarMenuSeguinos:checked ~ .SeguinosUl, #mostrarMenuMedios:checked ~ .MediosUl {
+    display: block;
+  }
+  .copyright {
+    margin-top: 30px;
+    font-size: 13px;
+    text-align: center;
+  }
+  .pDesk {
+    display: none;
+  }
+  .iconosHeader {    
+    display: none;
+  }
+  .mostrarMenuMediosMod, .mostrarMenuSeguinosMod, .mostrarMenuInformarMod, .mostrarMenuNosotrosMod, .mostrarMenuAyudarteMod {
+    display: block;
+  }
+  
+  .eventVista{
+    margin-top: 20px;
+  }
+  
+  .carrito{
+    padding-right: 0px;
+    padding-top: 0px; 
+  }
+
+  .mostrarProductosSolo{
+    gap: 50px;
+  }
+  .mostrarProductoSoloDiv1{
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .mostrarProductoSoloDiv1 img{
+    height: 200px;
+    width: 200px;
+  }
+
+  .mostrarProductoSoloDiv1Datos{
+    font-size: 15px;
+    gap:10px;
+  }
+
+  .detalles{
+    font-size: 14px;
+  }
+
+
+}

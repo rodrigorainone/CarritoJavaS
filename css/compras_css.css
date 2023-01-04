@@ -408,7 +408,8 @@ footer {
   }
   .contenerInfoHeader {
     grid-area: contenerInfoHeader;
-    background-image: url(../img/fondo4.jpg);
+    background-color:rgb(54, 54, 54) ;
+    color:white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -421,6 +422,7 @@ footer {
     top: 30px;
     z-index: 5;
   }
+ 
     /* menu mobile */
     .logoHeader {
         display: none;
@@ -429,7 +431,10 @@ footer {
     background-color: transparent;
   }
   .logoHeaderMobile, #menuNavPhone, .menuNavPhoneLabel {
-    display: block;
+    display: block;    
+  }
+  .logoHeaderMobile p a{
+    color:white;
   }
   .ulPrin {
     background-color: #084d6e;
@@ -560,7 +565,9 @@ footer {
     padding-right: 0px;
     padding-top: 0px; 
   }
-
+  .mostrarProductos{
+    width: 400px ;
+  }
   .mostrarProductosSolo{
     gap: 50px;
   }
